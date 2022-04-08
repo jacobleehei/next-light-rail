@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "next-light-rail",
+  "description": "An application for getting information of Light-Rail",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobleehei/Next-Light-Rail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobleehei/Next-Light-Rail/issues"
+  },
+  "homepage": "https://github.com/jacobleehei/Next-Light-Rail#readme"
+}
