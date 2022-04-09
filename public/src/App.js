@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { getGeolocation } from './utils/geolocation';
+import NextTrainTable from './components/nextTrainTable';
+import { getLightRailStation } from './utils/api';
 
 function App() {
+  const [geolocation, setGeolocation] = useState({})
+  const [lightRailStation, setLightRailStation] = useState([])
+
+  useEffect(() => {
+    getGeolocation(setGeolocation)
+  }, [])
+
+  useEffect(() => {
+    getLightRailStation(setLightRailStation, geolocation)
+  }, [geolocation])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NextTrainTable
+        rows={lightRailStation}
+      />
     </div>
   );
 }
