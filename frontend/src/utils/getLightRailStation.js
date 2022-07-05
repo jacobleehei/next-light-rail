@@ -18,4 +18,5 @@ export function getLightRailStation(setLightRailStation, geolocation) {
             })
             setLightRailStation(sortedLightRail)
         })
+        .catch(err => console.error(err.message))
 }
