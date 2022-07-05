@@ -1,5 +1,5 @@
 import React from 'react';
-import DataTable from '../dataDisplay/table.jsx';
+import DataTable from '../dataDisplay/Table.jsx';
 
 export default function NextTrainTable({
    rows,
