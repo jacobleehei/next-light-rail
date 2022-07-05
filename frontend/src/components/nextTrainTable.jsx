@@ -1,9 +1,9 @@
-import DataTable from '../dataDisplay/table';
+import React from 'react';
+import DataTable from '../dataDisplay/table.jsx';
 
 export default function NextTrainTable({
    rows,
 }) {
-
    return rows.length !== 0 && <DataTable
       rows={rows.map((s, idx) => {
          return {
